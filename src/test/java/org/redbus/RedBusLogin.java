@@ -41,6 +41,19 @@ public class RedBusLogin {
 					System.out.println("Broken Links :"+linksName);
 					
 				}
+				if (!(linksName == null)) {
+
+					URL url1 = new URL(linksName);
+					URLConnection openConnection1 = url.openConnection();
+					HttpsURLConnection connection1 = (HttpsURLConnection) openConnection;
+					int responseCode1 = connection.getResponseCode();
+					if (!(responseCode==200)) {
+						
+						brokenCount++;
+						System.out.println("Broken Links :"+linksName);
+						
+					}
+				
 			}
 		}
 		
